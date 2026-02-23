@@ -349,3 +349,6 @@ def run_bot():
     application.run_polling(close_loop=False)
 
 threading.Thread(target=run_bot, daemon=True).start()
+
+if __name__ == "__main__":
+    run_bot()
