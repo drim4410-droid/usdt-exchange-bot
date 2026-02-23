@@ -26,12 +26,6 @@ CURRENT_RATE = float(os.environ.get("CURRENT_RATE", "0.0"))
 if not BOT_TOKEN:
     raise RuntimeError("BOT_TOKEN is not set")
 
-# ---------- Flask ----------
-app = Flask(__name__)
-
-@app.get("/")
-def health():
-    return "OK"
 
 # ---------- States ----------
 ENTER_AMOUNT, CHOOSE_INPUT, CHOOSE_METHOD, ENTER_DETAILS = range(4)
